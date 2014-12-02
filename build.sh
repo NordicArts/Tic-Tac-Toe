@@ -20,12 +20,14 @@ cd TicTacToe/Valkyrie
 git init
 git checkout .
 git pull
+cd ../../
 
 # Go into NordicOS and update
 cd TicTacToe/NordicOS
 git init
 git checkout .
 git pull
+cd ../../
 
 # Build
 cmake .
