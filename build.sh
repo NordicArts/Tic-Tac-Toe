@@ -14,7 +14,20 @@ clear
 if [ -z "$rebuild" ]; then
     sh cleaner.sh
 fi
-git submodule update --recursive --init
+
+# Go into Valkyrie and update
+cd TicTacToe/Valkyrie
+git init
+git checkout .
+git pull
+
+# Go into NordicOS and update
+cd TicTacToe/NordicOS
+git init
+git checkout .
+git pull
+
+# Build
 cmake .
 make
 
