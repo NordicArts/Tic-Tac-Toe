@@ -27,6 +27,12 @@ set(GameSources ${Tic}/Main.cpp)
 # Standard Includes
 list(APPEND GameHeaders ${Tic}/Includes.hpp)
 
+# Grid
+link_directories(${Tic}/Grid)
+include_directories(${Tic}/Grid)
+list(APPEND GameHeaders ${Tic}/Grid/Grid.hpp)
+list(APPEND GameSources ${Tic}/Grid/Grid.cpp)
+
 # Boost
 find_package(Boost COMPONENTS locale REQUIRED)
 include_directories(${Boost_INCLUDES})
