@@ -21,14 +21,18 @@ namespace NordicArts {
         private:
             std::vector<GridCell> m_vGrid;
 
+            int m_iWidth;
+            int m_iHeight;
+
         // Methods
         public:
             Grid();
 
             std::vector<GridCell> createGrid();            
             std::vector<GridCell> createGrid(int iWidth, int iHeight);
-
             std::vector<GridCell> getGrid() const;
+
+            
 
         protected:
         private:

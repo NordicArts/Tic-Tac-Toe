@@ -11,6 +11,10 @@ namespace NordicArts {
         std::vector<GridCell> Grid::createGrid(int iWidth, int iHeight) {
             std::vector<GridCell> vGrid;
 
+            // Set the sizes
+            m_iWidth    = iWidth;
+            m_iHeight   = iHeight;
+
             for (int i = 0; i < iWidth; i++) {
                 for (int j = 0; j < iHeight; j++) {
                     GridCell sGrid(i, j, 0);

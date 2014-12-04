@@ -29,6 +29,7 @@
 #include <ios> // Some standard input-output
 #include <chrono>
 #include <thread>
+#include <stack>
 
 // OSX Includes
 #ifdef __OBJC__

@@ -15,10 +15,15 @@ if [ -z "$rebuild" ]; then
     sh cleaner.sh
 fi
 
+# Pull all submodules
+git submodule foreach git pull origin master
+
 # Go into Valkyrie and update
 cd TicTacToe/Valkyrie
 git init
 git checkout .
+git submodule init
+git submodule update
 git pull
 cd ../../
 
@@ -26,6 +31,8 @@ cd ../../
 cd TicTacToe/NordicOS
 git init
 git checkout .
+git submodule init
+git submodule update
 git pull
 cd ../../
 

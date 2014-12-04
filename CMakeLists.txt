@@ -33,6 +33,12 @@ include_directories(${Tic}/Grid)
 list(APPEND GameHeaders ${Tic}/Grid/Grid.hpp)
 list(APPEND GameSources ${Tic}/Grid/Grid.cpp)
 
+# AI
+link_directories(${Tic}/AI)
+include_directories(${Tic}/AI)
+list(APPEND GameHeaders ${Tic}/AI/AI.hpp)
+list(APPEND GameSources ${Tic}/AI/AI.cpp)
+
 # Boost
 find_package(Boost COMPONENTS locale REQUIRED)
 include_directories(${Boost_INCLUDES})

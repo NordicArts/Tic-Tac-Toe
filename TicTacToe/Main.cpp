@@ -1,5 +1,6 @@
 #include <Main.hpp>
 #include <Valkyrie/Player/Player.hpp>
+#include <AI/AI.hpp>
 #include <Grid/Grid.hpp>
 
 namespace NordicArts {
@@ -9,13 +10,17 @@ namespace NordicArts {
             Valkyrie::Player oPlayer(12);
             Valkyrie::Player *pPlayer = &oPlayer;
 
-            printIt(pPlayer->getLife());
-
+            // Grid
             Grid  oGrid;
             Grid *pGrid = &oGrid;
-
             pGrid->createGrid();
-            printIt(pGrid->getGrid().size());
+
+            // AI
+            AI  oAI(pGrid);
+            AI *pAI = &oAI;
+            pAI->setName("AI");
+
+            printIt(pAI->getName());
         
             return EXIT_SUCCESS;
         }
