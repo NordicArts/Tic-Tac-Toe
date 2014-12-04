@@ -27,6 +27,21 @@ set(GameSources ${Tic}/Main.cpp)
 # Standard Includes
 list(APPEND GameHeaders ${Tic}/Includes.hpp)
 
+# Game State
+link_directories(${Tic}/Game/GameState)
+include_directories(${Tic}/Game/GameState)
+list(APPEND GameHeaders ${Tic}/Game/GameState.hpp)
+list(APPEND GameHeaders ${Tic}/Game/GameState/Start.hpp)
+list(APPEND GameSources ${Tic}/Game/GameState/Start.cpp)
+list(APPEND GameHeaders ${Tic}/Game/GameState/Editor.hpp)
+list(APPEND GameSources ${Tic}/Game/GameState/Editor.cpp)
+
+# Game
+link_directories(${Tic}/Game)
+include_directories(${Tic}/Game)
+list(APPEND GameHeaders ${Tic}/Game/Game.hpp)
+list(APPEND GameSources ${Tic}/Game/Game.cpp)
+
 # Grid
 link_directories(${Tic}/Grid)
 include_directories(${Tic}/Grid)
@@ -52,6 +67,10 @@ include_directories(${Tic}/NordicOS)
 add_subdirectory(${Tic}/Valkyrie)
 link_directories(${Tic}/Valkyrie)
 include_directories(${Tic}/Valkyrie)
+
+# GLM
+link_directories(${Tic}/Valkyrie/glm)
+include_directories(${Tic}/Valkyrie/glm)
 
 # Compile
 add_executable(TicTacToe ${GameSources} ${GameHeaders})

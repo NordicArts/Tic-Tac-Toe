@@ -12,8 +12,8 @@ namespace NordicArts {
             std::vector<GridCell> vGrid;
 
             // Set the sizes
-            m_iWidth    = iWidth;
-            m_iHeight   = iHeight;
+            m_vGridSize.x = iWidth;
+            m_vGridSize.y = iHeight;
 
             for (int i = 0; i < iWidth; i++) {
                 for (int j = 0; j < iHeight; j++) {
@@ -30,5 +30,9 @@ namespace NordicArts {
         std::vector<GridCell> Grid::getGrid() const {
             return m_vGrid;
         }
+
+        glm::vec2 Grid::getGridSize() const {
+            return m_vGridSize;
+        }        
     };
 };

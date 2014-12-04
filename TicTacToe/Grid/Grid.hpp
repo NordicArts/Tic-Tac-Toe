@@ -2,6 +2,7 @@
 #define NordicArts_TicTacToe_Grid_H
 
 #include <Includes.hpp>
+#include <glm/glm.hpp>
 
 namespace NordicArts {
     namespace Game {
@@ -21,9 +22,8 @@ namespace NordicArts {
         private:
             std::vector<GridCell> m_vGrid;
 
-            int m_iWidth;
-            int m_iHeight;
-
+            glm::vec2 m_vGridSize;    
+    
         // Methods
         public:
             Grid();
@@ -32,7 +32,7 @@ namespace NordicArts {
             std::vector<GridCell> createGrid(int iWidth, int iHeight);
             std::vector<GridCell> getGrid() const;
 
-            
+            glm::vec2 getGridSize() const;
 
         protected:
         private:
