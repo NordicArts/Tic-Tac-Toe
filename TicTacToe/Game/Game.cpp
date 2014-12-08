@@ -19,7 +19,7 @@ namespace NordicArts {
         void Game::popState() {
             delete this->m_sStates.top();
             
-            this.m_sStates.pop();
+            this->m_sStates.pop();
     
             return;
         }
@@ -70,7 +70,7 @@ namespace NordicArts {
 
                 this->m_oWindow.clear(Valkyrie::Color::Black);
 
-                peekstate()->draw(iDT);
+                peekState()->draw(iDT);
 
                 this->m_oWindow.display();
             }
