@@ -1,0 +1,6 @@
+[submodule "TicTacToe/Valkyrie"]
+	path = TicTacToe/Valkyrie
+	url = git@github.com:NordicArts/Valkyrie.git
+[submodule "TicTacToe/NordicOS"]
+	path = TicTacToe/NordicOS
+	url = git@github.com:NordicArts/NordicOS.git
