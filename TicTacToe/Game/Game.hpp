@@ -2,6 +2,7 @@
 #define NordicArts_TicTacToe_Game_H
 
 #include <Includes.hpp>
+#include <Valkyrie/Window/Window.hpp>
 
 namespace NordicArts {
     namespace Game {
@@ -14,6 +15,7 @@ namespace NordicArts {
         
         protected:
         private:
+            Valkyrie::Window *m_pWindow;
 
         // Methods
         public:

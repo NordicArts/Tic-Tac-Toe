@@ -50,6 +50,9 @@ namespace NordicArts {
             // Create the AI Player
             AI  oAI(pGrid);
             AI *pAI = &oAI;
+
+            Valkyrie::Window oWindow;
+            m_pWindow = &oWindow;
         }
         
         void Game::gameLoop() {
@@ -57,7 +60,9 @@ namespace NordicArts {
 
             int i = 5000;
 
-            while (true) {
+            this->m_pWindow->createWindow();
+
+            while (this->m_pWindow->windowOpen()) {
                 int iDT = oTime.getSecond();
 
                 // Make sure state is something
@@ -68,11 +73,11 @@ namespace NordicArts {
                 peekState()->handleInput();
                 peekState()->update(iDT);
 
-                this->m_oWindow.clear(Valkyrie::Color::Black);
+                this->m_pWindow->clear(Valkyrie::Color::Black);
 
                 peekState()->draw(iDT);
 
-                this->m_oWindow.display();
+                this->m_pWindow->display();
             }
         }
 
